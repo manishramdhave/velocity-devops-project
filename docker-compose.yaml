@@ -4,6 +4,7 @@ services:
     image: 'tomcat:10'
     ports:
       - "8080:8080"
+    name: tomcat_server
     volumes:
       - "/mnt/wars:/usr/local/tomcat/webapps"
 
