@@ -2,6 +2,7 @@ version: '3'
 services:
   tomcat-service:
     image: 'tomcat:10'
+    container_name: tomcat_server
     ports:
       - "8080:8080"
     volumes:
