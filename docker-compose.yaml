@@ -22,4 +22,5 @@ services:
       - mysql_data:/var/lib/mysql
 
 volumes:
+  wars:
   mysql_data:             # This aligns with version and services
