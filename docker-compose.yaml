@@ -9,6 +9,26 @@ services:
       - "/mnt/wars:/usr/local/tomcat/webapps"
     networks: 
       - NetworkA
+
+version: '3.8'
+  db:                     
+    image: mysql:latest  
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: manish123
+      MYSQL_DATABASE: database-1
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: manish123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks: 
+      - NetworkA
+      
+volumes:
+  mysql_data:            
 networks:
   - NetworkA
 
